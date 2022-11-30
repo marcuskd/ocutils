@@ -1,4 +1,4 @@
-'''
+"""
 Pressure calculator function.
 
 The pressure is calculated from input depth and latitude using the National Physical Laboratory (NPL)
@@ -10,7 +10,7 @@ The inputs are NumPy 1D arrays of depth (m) and latitude (degrees), and a flag t
 correction for common oceans.
 
 Returns a pressure array (bar) of dimensions depth, latitude
-'''
+"""
 
 import numpy
 

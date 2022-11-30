@@ -1,9 +1,9 @@
-'''
+"""
 Test class for calc_SSP function
 
 The test values below were taken from the NPL online calculator at:
 http://resource.npl.co.uk/acoustics/techguides/soundseawater/content.html
-'''
+"""
 
 import unittest
 import numpy
@@ -11,7 +11,7 @@ from ocutils.calc_SSP import calc_SSP
 from ocutils.get_path import get_path
 
 
-class Test_calc_SSP(unittest.TestCase):
+class TestCalcSSP(unittest.TestCase):
 
     def setUp(self):
         # Define the test values

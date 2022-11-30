@@ -1,7 +1,7 @@
-'''
+"""
 Function to load Chen & Millero coefficients from a text file for SSP calculation.
 Returns a dictionary of coefficients.
-'''
+"""
 
 
 def load_CM_coeffs(coeffs_file):

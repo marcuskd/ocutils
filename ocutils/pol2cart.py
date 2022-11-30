@@ -1,4 +1,6 @@
-'''pol2cart function definition'''
+"""
+pol2cart function definition
+"""
 
 import numpy
 
@@ -6,7 +8,7 @@ import numpy
 def pol2cart(r, theta, pol, pxo, pyo, xmin, xmax, ymin, ymax,
              xstep=None, ystep=None):
 
-    '''
+    """
     Utility function to convert polar to Cartesian data.
 
     For each Cartesian coordinate, the assigned value is linearly interpolated
@@ -41,7 +43,7 @@ def pol2cart(r, theta, pol, pxo, pyo, xmin, xmax, ymin, ymax,
     y: Cartesian y coordinate (numpy array)
     cart: Interpolated Cartesian data (numpy array, dimensions x.size,y.size
           for 2D data or N,x.size,y.size for 3D data)
-    '''
+    """
 
     # Check the dimensions
 
@@ -56,6 +58,7 @@ def pol2cart(r, theta, pol, pxo, pyo, xmin, xmax, ymin, ymax,
         check_dims = dims[1:]
     else:
         check_dims = dims
+        nz = None
 
     if (ntheta, nr) != check_dims:
         raise ValueError('Input dimensions are not consistent')
@@ -127,6 +130,7 @@ def pol2cart(r, theta, pol, pxo, pyo, xmin, xmax, ymin, ymax,
                 else:
                     int_ok = False
 
+            rc = r_ind = None
             if int_ok:
                 rc = numpy.sqrt(xc**2 + yc**2)
                 r_ind = int(numpy.floor((rc - r[0]) / dr))
@@ -140,6 +144,7 @@ def pol2cart(r, theta, pol, pxo, pyo, xmin, xmax, ymin, ymax,
                 else:
                     interp_r = False
 
+                pol01 = pol11 = None
                 if is3d:
                     pol00 = pol[:, theta_ind0, r_ind]
                     pol10 = pol[:, theta_ind1, r_ind]

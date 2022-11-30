@@ -1,11 +1,15 @@
-'''get_path function definition'''
+"""
+get_path function definition
+"""
 
 from pathlib import Path, PurePath
 
 
 def get_path(file_name):
 
-    '''Get relative path to specified file assuming either development or deployment environment'''
+    """
+    Get relative path to specified file assuming either development or deployment environment
+    """
 
     pkg_name = __name__.split('.')[0]
     dep_name = 'site-packages'

@@ -1,4 +1,4 @@
-'''
+"""
 Sound Speed Profile (SSP) calculator function.
 
 The SSP is calculated from input temperature, salinity and pressure using the UNESCO (Chen & Millero) equation,
@@ -11,7 +11,7 @@ Temperature and salinity array dimensions are: time, depth, lat, long
 Pressure array dimensions are: depth, lat
 
 Returns a SSP array of same dimensions as T and S
-'''
+"""
 
 from ocutils.load_CM_coeffs import load_CM_coeffs
 import numpy

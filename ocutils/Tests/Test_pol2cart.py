@@ -1,13 +1,13 @@
-'''
+"""
 Test class for pol2cart function
-'''
+"""
 
 import unittest
 import numpy
 from ocutils.pol2cart import pol2cart
 
 
-class Test_pol2cart(unittest.TestCase):
+class TestPol2cart(unittest.TestCase):
 
     def setUp(self):
 
@@ -194,6 +194,7 @@ class Test_pol2cart(unittest.TestCase):
         cart = numpy.around(cart, self.num_dp)
 
         self.assertEqual(cart[0, 2, 10], 0)  # x=0, y=3
+
 
 if __name__ == '__main__':
     unittest.main()

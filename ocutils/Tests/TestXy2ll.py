@@ -1,6 +1,6 @@
-'''
+"""
 Test class for xy2ll function
-'''
+"""
 
 import unittest
 import numpy
@@ -8,7 +8,7 @@ from ocutils import earth_radius
 from ocutils.xy2ll import xy2ll
 
 
-class Test_xy2ll(unittest.TestCase):
+class TestXy2ll(unittest.TestCase):
 
     def setUp(self):
         self.tol = 1e-6
@@ -65,6 +65,7 @@ class Test_xy2ll(unittest.TestCase):
         lat, lon = xy2ll(x, y, latc, lonc)
         self.assertTrue(numpy.abs(lat - latt).mean() <= self.tol)
         self.assertTrue(numpy.abs(lon - lont).mean() <= self.tol)
+
 
 if __name__ == '__main__':
     unittest.main()
