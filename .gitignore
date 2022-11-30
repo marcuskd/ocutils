@@ -1,0 +1,5 @@
+/build
+/dist
+/ocutils.egg-info
+/.idea
+__pycache__/
