@@ -1,1 +1,1 @@
-earth_radius = 6371000
+earth_radius = 6378137

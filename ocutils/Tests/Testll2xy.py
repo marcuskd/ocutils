@@ -8,7 +8,7 @@ from ocutils import earth_radius
 from ocutils.ll2xy import ll2xy
 
 
-class TestLl2xy(unittest.TestCase):
+class Testll2xy(unittest.TestCase):
 
     def setUp(self):
         self.tol = 1e-6
