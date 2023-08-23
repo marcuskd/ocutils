@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='ocutils',
-      version='1.2.0',
+      version='1.3.0',
       description='Utility functions for oceanography related work',
       author='Marcus Donnelly',
       author_email='marcus.k.donnelly@gmail.com',

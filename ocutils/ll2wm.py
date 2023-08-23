@@ -3,10 +3,10 @@ ll2wm function definition
 """
 
 import numpy
-from ocutils import earth_radius
+from ocutils import earth_radius as earth_rad
 
 
-def ll2wm(lat, lon, lon0=0):
+def ll2wm(lat, lon, lon0=0, earth_radius=None):
 
     """
     Convert latitude and longitude to Web-Mercator coordinates.
@@ -16,10 +16,14 @@ def ll2wm(lat, lon, lon0=0):
         lon: Numpy array of longitudes (degrees)
     kwargs...
         lon0: longitude of reference meridian (degrees)
+        earth_radius: value for Earth radius (m) to override default
     returns...
         x: Numpy array of horizontal distances (m)
         y: Numpy array of vertical distances (m)
     """
+
+    if earth_radius is None:
+        earth_radius = earth_rad
 
     if numpy.any(lat <= -90) or numpy.any(lat >= 90):
         raise ValueError('Latitude must be > -90 and < 90 degrees')

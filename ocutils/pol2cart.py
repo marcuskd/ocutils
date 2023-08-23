@@ -22,27 +22,22 @@ def pol2cart(r, theta, pol, pxo, pyo, xmin, xmax, ymin, ymax,
 
     The input grid can be 2D (theta, r) or 3D (N, theta, r). For 3D data the
     interpolation described above is applied over all N points.
-    -------
+
     args...
-    -------
-    r: polar radial coordinate (numpy array)
-    theta: polar angle coordinate in radians (numpy array)
-    pol: polar data (numpy ndarray, dimensions theta.size,r.size for 2D data
-         or N,theta.size,r.size for 3D data)
-    pxo, pyo: origin of polar data in Cartesian frame
-    xmin, xmax: x coordinate bounds of interpolated Cartesian data
-    ymin, ymax: y coordinate bounds of interpolated Cartesian data
-    ---------
+        r: polar radial coordinate (numpy array)
+        theta: polar angle coordinate in radians (numpy array)
+        pol: polar data (numpy ndarray, dimensions theta.size,r.size for 2D data
+             or N,theta.size,r.size for 3D data)
+        pxo, pyo: origin of polar data in Cartesian frame
+        xmin, xmax: x coordinate bounds of interpolated Cartesian data
+        ymin, ymax: y coordinate bounds of interpolated Cartesian data
     kwargs...
-    ---------
-    xstep, ystep: x and y interpolation intervals (both default to r interval)
-    ----------
+        xstep, ystep: x and y interpolation intervals (both default to r interval)
     returns...
-    ----------
-    x: Cartesian x coordinate (numpy array)
-    y: Cartesian y coordinate (numpy array)
-    cart: Interpolated Cartesian data (numpy array, dimensions x.size,y.size
-          for 2D data or N,x.size,y.size for 3D data)
+        x: Cartesian x coordinate (numpy array)
+        y: Cartesian y coordinate (numpy array)
+        cart: Interpolated Cartesian data (numpy array, dimensions x.size,y.size
+              for 2D data or N,x.size,y.size for 3D data)
     """
 
     # Check the dimensions
